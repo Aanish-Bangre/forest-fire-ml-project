@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Algerian Forest Fire Prediction</h2>
+    <form action="{{ url_for('predictdata') }}" method="POST">
+        <label for="Temperature">Temperature:</label>
+        <input type="number" step="any" name="Temperature" required><br>
+        <label for="RH">RH:</label>
+        <input type="number" step="any" name="RH" required><br>
+        <label for="Ws">Ws:</label>
+        <input type="number" step="any" name="Ws" required><br>
+        <label for="Rain">Rain:</label>
+        <input type="number" step="any" name="Rain" required><br>
+        <label for="FFMC">FFMC:</label>
+        <input type="number" step="any" name="FFMC" required><br>
+        <label for="DMC">DMC:</label>
+        <input type="number" step="any" name="DMC" required><br>
+        <label for="DC">DC:</label>
+        <input type="number" step="any" name="DC" required><br>
+        <label for="ISI">ISI:</label>
+        <input type="number" step="any" name="ISI" required><br>
+        <label for="BUI">BUI:</label>
+        <input type="number" step="any" name="BUI" required><br>
+        <label for="Classes">Classes:</label>
+        <input type="text" name="Classes" required><br>
+        <label for="Region">Region:</label>
+        <input type="text" name="Region" required><br>
+        <button type="submit">Predict</button>
+    </form>
+
+    <h2>
+        The FWI Prediction is: {{ result }}
+    </h2>
+</body>
+</html>
